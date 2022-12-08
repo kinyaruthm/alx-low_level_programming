@@ -1,3 +1,2 @@
-vi 0. Preprocessor
 #!/bin/bash
 gcc -E $CFILE -o c
