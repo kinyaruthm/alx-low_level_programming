@@ -1,9 +1,15 @@
+/*
+ * File: 4-strpbrk.c
+ * Auth: not
+ */
+
 #include "main.h"
 #include <stdio.h>
 /**
  * _strpbrk - prints the consecutive characters of s1 that are in s2
  * @s: source string
  * @accept: searching string
+ * description _strpbrk: over there
  * return: new string
  */
 
@@ -15,7 +21,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (j = 0; *(accept + j); j++)
 		{
-			if (*(s + i) == *(accept +j))
+			if (*(s + i) == *(accept + j))
 			{
 				break;
 			}

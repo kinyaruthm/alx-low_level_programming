@@ -1,7 +1,6 @@
 #include "main.h"
-
 /**
- * _strspn - prints the conescutive characters of s1 that are in s2
+ * _strspn - gets the length of a prefix substring 
  * @s: source string
  * @accept: searching string
  * return: new string
@@ -15,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (i = 0; *(accept + i); i++)
 		{
-			if (*(s + j) == *(accept +i))
+			if (*(s + j) == *(accept + i))
 				break;
 		}
 	if (*(accept + i) == '\0')
