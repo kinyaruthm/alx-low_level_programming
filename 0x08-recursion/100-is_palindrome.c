@@ -29,7 +29,7 @@ int p1(char *s, int I)
 		return (1);
 	}
 
-	if (*s == *(s + 1))
+	if (*s == *(s + I))
 	{
 		return (p1(s + 1, I - 2));
 	}
