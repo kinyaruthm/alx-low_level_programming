@@ -3,6 +3,7 @@
 /**
  * _evaluate - evaluates a function sqrt
  * @n: integer
+ * @i: integer
  * Return: avaluate sqrt
  */
 
@@ -27,9 +28,12 @@ int _evaluate(int i, int n)
 int _sqrt_recursion(int n)
 {
 	int i = 0;
+
 	if (i < 0)
 		return (-1);
+
 	else
+	{
 		return (_evaluate(i, n));
-	
+	}
 }
