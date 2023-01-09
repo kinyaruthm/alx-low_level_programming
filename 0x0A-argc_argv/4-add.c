@@ -5,7 +5,7 @@
 #include <ctype.h>
 
 /**
- * check_sum - check string if tehre are digit
+ * check_num - check string if tehre are digit
  * @str: array str
  * Return: Always 0 on success
  */
