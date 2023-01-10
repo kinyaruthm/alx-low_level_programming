@@ -6,7 +6,7 @@
  * str_concat - concantenates 2 strings
  * @s1: pointer to string
  * @s2: pointer to string
- * Return: pointer to newly allocated memory 
+ * Return: pointer to newly allocated memory
  */
 
 char *str_concat(char *s1, char *s2)
