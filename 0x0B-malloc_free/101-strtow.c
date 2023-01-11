@@ -38,6 +38,7 @@ int count_words(char *str)
 
 	for (index = 0; *(str + index); index++)
 		len++;
+
 	for (index = 0; index < len; index++)
 	{
 		if (*(str + index) != ' ')
@@ -49,6 +50,7 @@ int count_words(char *str)
 
 	return (words);
 }
+
 /**
  * strtow - splits a string into words
  * @str: the string to be split
@@ -63,11 +65,12 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
+
 	words = count_words(str);
 	if (words == 0)
 		return (NULL);
 
-	strings = malloc(sizeof(char) * (words + 1));
+	strings = malloc(sizeof(char *) * (words + i));
 	if (strings == NULL)
 		return (NULL);
 
@@ -78,7 +81,7 @@ char **strtow(char *str)
 
 		letters = word_len(str + index);
 
-		strings[w] = malloc(sizeof(char) * (letters + 1));
+		strings[w] = malloc(sizeof(char) * (letters + i));
 
 		if (strings[w] == NULL)
 		{
