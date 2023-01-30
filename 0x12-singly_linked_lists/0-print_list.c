@@ -3,8 +3,8 @@
 
 /**
  * print_list - prints all the elements ata a list_t list
- * @n: The list_t list
- * Return: number pof nodes in n
+ * @h: The list_t list
+ * Return: number of nodes in h
  */
 
 size_t print_list(const list_t *h)
