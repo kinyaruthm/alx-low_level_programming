@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_nodelist - adds a new node at the beginning of list
+ * add_nodeint - adds a new node at the beginning of list
  * @head: a pointer to the addresss of the head
  * @n: integer of the new node
  * Return: if function fails - NULL
