@@ -60,14 +60,14 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprint(STDERR_FILENO, "usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "usage: cp file_from file_to\n");
 		exit(97);
 	}
 
 	buffer = create_buffer(argv[1]);
-	from = open(argv[1], 0_rdonly);
+	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
-	to = open(argv[1], 0_creat | 0_WRONLY | 0_TRUNC, 0000);
+	to = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC, 0000);
 
 	do {
 		if (from == -1 || r == -1)
@@ -80,14 +80,14 @@ int main(int argc, char *argv[])
 		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
-			dprint(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 
 			free(buffer);
 			exit(98);
 		}
 
 		r = read(from, buffer, 1024);
-		to = open(argv[1], 0_WRONLY | 0_APPEND);
+		to = open(argv[1], O_WRONLY | O_APPEND);
 	} while (r > 0);
 
 	free(buffer);
